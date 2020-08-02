@@ -1,0 +1,26 @@
+{
+  "name": "react-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server",
+    "client": "npm start --prefix ./client",
+    "both": "concurrently \"npm run dev\" \"npm run client\"",
+    "build": "npm run build --prefix ./client",
+    "log": "echo \"Success: Server successfully started on port \" + ${PORT:-8080}",
+    "cdInstall": "cd client && npm install ${package: }"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
